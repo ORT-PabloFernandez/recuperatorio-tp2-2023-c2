@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const salesRouter = require('./routes/sales');
+//const suppliesRouter = require('./routes/supplies');
+const costumerRouter = require('./routes/costumers');
 
 var app = express();
 
@@ -23,6 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/users/', usersRouter);
 app.use('/api/sales/', salesRouter);
+//se agrega endpoint
+//app.use('/api/supplies/', suppliesRouter);
+//app.use('/api/costumers/', costumerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
